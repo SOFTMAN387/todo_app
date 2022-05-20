@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./index.js">
+    </script>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <h2><b style="color: black;text-shadow: 1px 1px 5px;">SoftMan's</b> Tasks Lists</h2>
+        <input type="text" id="myInput" placeholder="Add Menu List...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ol id="myUL">
+
+        <li class="checked" style="color:rgb(0, 195, 255);">Add Your Daily Routine</li>
+
+
+    </ol>
+
+
+    <script>
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ol');
+        list.addEventListener('click', function(ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+    </script>
+</body>
+
+</html>
